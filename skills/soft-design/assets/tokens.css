@@ -1,0 +1,63 @@
+/* Soft Design semantic tokens. Set data-theme="dark" on the document root. */
+@font-face {
+  font-family: Inter;
+  src: url('fonts/inter.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #505050;
+  --strong: #202020;
+  --muted-foreground: #6e6e6e;
+  --muted: #f5f5f5;
+  --border: #e4e4e4;
+  --ring: #737373;
+  --accent: #dced9f;
+  --accent-foreground: #35451c;
+  --destructive: #b43c2f;
+  --glass-track: #737373;
+  --selection: #e5e0fb;
+  --font: Inter, sans-serif;
+  --mono: ui-monospace, 'SFMono-Regular', Consolas, monospace;
+  --body: 16px;
+  --small: 14px;
+  --reading-width: 550px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --radius-control: 8px;
+  --radius-popup: 12px;
+  --radius-panel: 16px;
+  --radius-pill: 9999px;
+  --target: 48px;
+  --micro-duration: 200ms;
+  --control-duration: 240ms;
+  --panel-duration: 300ms;
+  --content-duration: 300ms;
+  --content-blur: 3px;
+  --content-ease: cubic-bezier(.4, 0, .2, 1);
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --shadow-popup: 0 0 0 1px #00000006, 0 2px 4px #00000006, 0 8px 16px #00000006, 0 24px 48px #0000000a;
+}
+[data-theme=dark] {
+  color-scheme: dark;
+  --background: #050505;
+  --foreground: #e2e2e2;
+  --strong: #f4f4f4;
+  --muted-foreground: #888888;
+  --muted: #101010;
+  --border: #232323;
+  --ring: #aaaaaa;
+  --destructive: #ff9b90;
+  --glass-track: #737373;
+  --selection: #55497a;
+  --shadow-popup: 0 0 0 1px #ffffff14, 0 8px 24px #00000040, 0 24px 48px #00000030;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --micro-duration: 0ms; --control-duration: 0ms; --panel-duration: 0ms; --content-duration: 0ms; }
+}

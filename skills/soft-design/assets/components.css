@@ -1,0 +1,48 @@
+/* Opt-in recipes. Put soft-ui on the application root. Import tokens.css first. */
+.soft-ui { color: var(--foreground); background: var(--background); font: 400 var(--body)/1.5 var(--font); -webkit-font-smoothing: antialiased; }
+.soft-ui, .soft-ui * { box-sizing: border-box; }
+.soft-ui h1, .soft-ui h2, .soft-ui h3, .soft-ui p { margin: 0; font-size: 16px; line-height: 24px; }
+.soft-ui h1, .soft-ui h2, .soft-ui h3 { font-weight: 500; }
+.soft-ui p, .soft-muted { color: var(--muted-foreground); }
+.soft-ui button, .soft-ui input, .soft-ui select { font: inherit; color: inherit; }
+.soft-ui button { cursor: pointer; }
+.soft-ui :focus-visible { outline: 1px solid var(--ring); outline-offset: 3px; }
+.soft-ui ::selection { background: var(--selection); }
+.soft-button { min-height: var(--target); padding: 0 16px; border: 1px solid var(--border); border-radius: var(--radius-control); background: var(--background); font-size: var(--small) !important; transition: background-color var(--micro-duration) var(--ease); }
+.soft-button:hover:not(:disabled) { background: var(--muted); }
+.soft-button:disabled { opacity: .45; cursor: not-allowed; }
+.soft-button.primary { color: white; background: linear-gradient(#656565,#393939); border-color: #777; box-shadow: inset 0 1px 1px #ffffff35; }
+.soft-button.lime { color: var(--accent-foreground); background: var(--accent); border-color: #bcc99c; box-shadow: inset 0 1px 1px #ffffff88; }
+.soft-group { border: 1px solid var(--border); border-radius: var(--radius-panel); background: var(--muted); padding: 0 24px; }
+.soft-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 80px; padding: 16px 0; }
+.soft-row + .soft-row { border-top: 1px solid var(--border); }
+.soft-row label, .soft-row .label { font-size: var(--small); }
+.soft-row small { display: block; margin-top: 4px; color: var(--muted-foreground); font-size: var(--small); line-height: 20px; }
+.soft-switch { flex: 0 0 64px; width: 64px; height: 48px; padding: 10px 0; border: 0; background: transparent; }
+.soft-switch .track { position: relative; display: block; height: 28px; width: 64px; border-radius: 99px; background: #454545; border: 1px solid #777; }
+.soft-switch[aria-checked=true] .track { background: #737373; }
+.soft-switch .thumb { position: absolute; width: 32px; height: 22px; left: 2px; top: 2px; border-radius: 99px; background: linear-gradient(#fff,#e5e5e5); box-shadow: inset 0 1px 1px white,0 1px 3px #00000025; transition: transform var(--control-duration) var(--ease); }
+.soft-switch[aria-checked=true] .thumb { transform: translateX(26px); }
+.soft-range { width: 160px; max-width: 100%; height: 48px; accent-color: var(--ring); cursor: pointer; }
+.soft-tabs { display: flex; gap: 24px; border-bottom: 1px solid var(--border); }
+.soft-tabs [role=tab] { min-height: 48px; min-width: 48px; padding: 0 4px; border: 0; border-bottom: 2px solid transparent; background: none; color: var(--muted-foreground); font-size: var(--small); }
+.soft-tabs [aria-selected=true] { color: var(--strong); border-bottom-color: var(--foreground); }
+.soft-panel { min-height: 136px; padding-top: 24px; }
+.soft-panel p { margin-top: 8px; font-size: 14px; line-height: 20px; }
+.soft-field { display: grid; gap: 8px; }
+.soft-field label { font-size: var(--small); }
+.soft-field input { min-width: 0; min-height: 48px; width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: var(--radius-control); background: var(--muted); }
+.soft-field input[aria-invalid=true] { border-color: var(--destructive); }
+.soft-field .error { color: var(--destructive); }
+.soft-field small { min-height: 20px; font-size: 14px; color: var(--muted-foreground); }
+.soft-ui output { font-variant-numeric: tabular-nums; }
+@media (max-width: 480px) {
+  .soft-group { padding: 0 16px; }
+  .soft-row { gap: 16px; }
+  .soft-range { width: 112px; }
+  .soft-tabs { gap: 16px; }
+}
+@media (forced-colors: active) {
+  .soft-switch .track, .soft-switch .thumb { border: 1px solid ButtonText; }
+  .soft-tabs [aria-selected=true] { border-bottom-color: Highlight; }
+}

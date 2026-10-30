@@ -1,0 +1,14 @@
+body { margin: 0; }
+main { max-width: 646px; margin: 0 auto; padding: 48px; }
+header { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; margin-bottom: 48px; }
+header p { margin-top: 8px !important; font-size: 14px !important; line-height: 20px !important; }
+header button { flex-shrink: 0; }
+section { margin-bottom: 48px; }
+section > h2 { margin-bottom: 16px !important; }
+.section-note { margin-bottom: 16px !important; font-size: 14px !important; }
+.count-row { display: flex; gap: 16px; margin-top: 16px; font-size: 14px; color: var(--muted-foreground); }
+#count { display: inline-block; min-width: 32px; font-variant-numeric: tabular-nums; color: var(--foreground); }
+#motion-label { display: inline-block; margin: 8px 0 0 16px; font-size: 12px; }
+.actions { display: flex; gap: 12px; margin-top: 16px; }
+footer { padding-top: 24px; border-top: 1px solid var(--border); font-size: 14px; color: var(--muted-foreground); }
+@media (max-width: 600px) { main { padding: 24px; } header { flex-wrap: wrap; margin-bottom: 32px; } #motion-label { display: block; margin-left: 0; } }

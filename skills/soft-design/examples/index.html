@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Soft Design — working reference</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/components.css">
+  <link rel="stylesheet" href="example.css">
+  <script src="example.js" type="module"></script>
+</head>
+<body class="soft-ui">
+  <main>
+    <header><div><h1>Workspace settings</h1><p>A working reference, not an application template.</p></div><button class="soft-button" id="theme">Light theme</button></header>
+    <section aria-labelledby="preferences"><h2 id="preferences">Preferences</h2><div class="soft-group">
+      <div class="soft-row"><div id="focus-label" class="label">Focus mode<small>Quiet notifications while you work.</small></div><button class="soft-switch" role="switch" aria-checked="true" aria-labelledby="focus-label" id="focus"><span class="track"><span class="thumb"></span></span></button></div>
+      <div class="soft-row"><label for="intensity">Intensity<small><output for="intensity" id="intensity-value">64%</output></small></label><input class="soft-range" id="intensity" type="range" min="0" max="100" value="64"></div>
+    </div></section>
+    <section aria-labelledby="views"><h2 id="views">Selective soft dissolve</h2><p class="section-note">Switch views. Only the title, description, and count change.</p>
+      <div class="soft-tabs" role="tablist" aria-label="Collections"><button role="tab" id="tab-0" aria-selected="true" aria-controls="panel">Notes</button><button role="tab" id="tab-1" aria-selected="false" aria-controls="panel" tabindex="-1">Links</button><button role="tab" id="tab-2" aria-selected="false" aria-controls="panel" tabindex="-1">Drafts</button></div>
+      <div class="soft-panel" id="panel" role="tabpanel" aria-labelledby="tab-0" tabindex="0"><h3 id="title">Field notes</h3><p id="description">Ideas and observations worth keeping.</p><div class="count-row"><span>Items</span><span id="count">24</span></div></div>
+      <button class="soft-button" id="add">Add one item</button><span id="motion-label" class="soft-muted">300ms · 3px blur · no displacement</span>
+    </section>
+    <section aria-labelledby="form-title"><h2 id="form-title">A complete field</h2><form id="name-form" novalidate><div class="soft-field"><label for="name">Workspace name</label><input id="name" maxlength="80" required aria-describedby="name-help" placeholder="Give it a name"><small id="name-help" role="status">This example saves in memory only.</small></div><div class="actions"><button class="soft-button primary" type="submit">Save name</button><button class="soft-button" type="button" disabled>Export unavailable</button></div></form></section>
+    <footer>Native controls, two themes, and reduced-motion support. No external requests.</footer>
+  </main>
+</body>
+</html>
